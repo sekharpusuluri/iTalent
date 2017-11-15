@@ -1,2 +1,0 @@
-# iTalent
-iTalent Digital repository
