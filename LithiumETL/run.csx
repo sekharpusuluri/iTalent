@@ -16,10 +16,10 @@ public static void Run(TimerInfo myTimer, TraceWriter log)
 {
     log.Info($"Starting the GetLithiumData function execution at: {DateTime.Now.ToString()}");
 
-    string strTenantID = ConfigurationManager.AppSettings["TenentID"].ToString();
-    string strClientID = ConfigurationManager.AppSettings["ClientID"].ToString();
-    string strClientSecret = ConfigurationManager.AppSettings["ClientSecret"].ToString();
-    string strRefreshToken = ConfigurationManager.AppSettings["RefreshToken"].ToString();
+    string strTenantID = ConfigurationManager.ConnectionStrings["TenentID"].ToString();
+    string strClientID = ConfigurationManager.ConnectionStrings["ClientID"].ToString();
+    string strClientSecret = ConfigurationManager.ConnectionStrings["ClientSecret"].ToString();
+    string strRefreshToken = ConfigurationManager.ConnectionStrings["RefreshToken"].ToString();
 
     string strSQLConn = ConfigurationManager.ConnectionStrings["AzureSQLConn"].ToString();
 
