@@ -16,12 +16,12 @@ public static void Run(TimerInfo myTimer, TraceWriter log)
 {
     log.Info($"Starting the GetLithiumData function execution at: {DateTime.Now.ToString()}");
 
-    string strTenantID = ConfigurationManager.ConnectionStrings["TenentID"].ToString();
-    string strClientID = ConfigurationManager.ConnectionStrings["ClientID"].ToString();
-    string strClientSecret = ConfigurationManager.ConnectionStrings["ClientSecret"].ToString();
-    string strRefreshToken = ConfigurationManager.ConnectionStrings["RefreshToken"].ToString();
-
-    string strSQLConn = ConfigurationManager.ConnectionStrings["AzureSQLConn"].ToString();
+    string strTenantID = ConfigurationManager.ConnectionStrings["LithiumTenantId"].ToString();
+    string strClientID = ConfigurationManager.ConnectionStrings["LithiumClientId"].ToString();
+    string strClientSecret = ConfigurationManager.ConnectionStrings["LithiumClientSecret"].ToString();
+    string strRefreshToken = ConfigurationManager.ConnectionStrings["LithiumRefreshToken"].ToString();
+            
+    string strSQLConn = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ToString();
 
     GetPBIData getPBIData = new GetPBIData(log);
     getPBIData.LoadandProcessLithiumData(strSQLConn, strTenantID, strClientID, strClientSecret, strRefreshToken);
