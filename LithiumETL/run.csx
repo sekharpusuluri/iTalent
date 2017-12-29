@@ -23,8 +23,8 @@ public static void Run(TimerInfo myTimer, TraceWriter log)
             
     string strSQLConn = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ToString();
 
-    GetPBIData getPBIData = new GetPBIData(log);
-    getPBIData.LoadandProcessLithiumData(strSQLConn, strTenantID, strClientID, strClientSecret, strRefreshToken);
+    GetLithiumData getLithiumData = new GetLithiumData(log);
+    getLithiumData.LoadandProcessLithiumData(strSQLConn, strTenantID, strClientID, strClientSecret, strRefreshToken);
 
     log.Info($"Completed the GetLithiumData function execution at: {DateTime.Now} .");
 }
