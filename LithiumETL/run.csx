@@ -12,6 +12,7 @@ using Microsoft.Azure.WebJobs.Host;
 using iTalent.LithiumConnector;
 using System.Configuration;
 
+/* Copyright (c) 2018 iTalent Digital */
 public static void Run(TimerInfo myTimer, TraceWriter log)
 {
     log.Info($"Starting the GetLithiumData function execution at: {DateTime.Now.ToString()}");
