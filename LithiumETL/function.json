@@ -5,7 +5,8 @@
       "type": "timerTrigger",
       "direction": "in",
       "schedule": "0 0 6 * * *",
-      "runOnStartup": true
+      "runOnStartup": true,
+      "functionTimeout": "00:10:00"
     }
   ],
   "disabled": false
