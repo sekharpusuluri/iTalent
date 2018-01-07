@@ -15,11 +15,11 @@ using System.Configuration;
 /* Copyright (c) 2018 iTalent Digital */
 public static void Run(TimerInfo myTimer, TraceWriter log)
 {
-     string strTenantID = ConfigurationManager.ConnectionStrings["LithiumTenantId"] != null ? ConfigurationManager.ConnectionStrings["LithiumTenantId"].ToString() : string.Empty;
-     string strClientID = ConfigurationManager.ConnectionStrings["LithiumClientId"] != null ? ConfigurationManager.ConnectionStrings["LithiumClientId"].ToString() : string.Empty;
-     string strClientSecret = ConfigurationManager.ConnectionStrings["LithiumClientSecret"] != null ? ConfigurationManager.ConnectionStrings["LithiumClientSecret"].ToString() : string.Empty;
-     string strRefreshToken = ConfigurationManager.ConnectionStrings["LithiumRefreshToken"] != null ? ConfigurationManager.ConnectionStrings["LithiumRefreshToken"].ToString() : string.Empty;
-     string strSQLConn = ConfigurationManager.ConnectionStrings["SqlConnectionString"] != null ? ConfigurationManager.ConnectionStrings["SqlConnectionString"].ToString() : string.Empty;
+     string strTenantID = ConfigurationManager.AppSettings["LithiumTenantId"] != null ? ConfigurationManager.AppSettings["LithiumTenantId"].ToString() : string.Empty;
+            string strClientID = ConfigurationManager.AppSettings["LithiumClientId"] != null ? ConfigurationManager.AppSettings["LithiumClientId"].ToString() : string.Empty;
+            string strClientSecret = ConfigurationManager.AppSettings["LithiumClientSecret"] != null ? ConfigurationManager.AppSettings["LithiumClientSecret"].ToString() : string.Empty;
+            string strRefreshToken = ConfigurationManager.AppSettings["LithiumRefreshToken"] != null ? ConfigurationManager.AppSettings["LithiumRefreshToken"].ToString() : string.Empty;
+            string strSQLConn = ConfigurationManager.AppSettings["SqlConnectionString"] != null ? ConfigurationManager.AppSettings["SqlConnectionString"].ToString() : string.Empty;
 
      if (strSQLConn != string.Empty && strTenantID != string.Empty && strClientID != string.Empty && strClientSecret != string.Empty && strRefreshToken != string.Empty)
      {
